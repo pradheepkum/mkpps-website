@@ -62,16 +62,16 @@ window.addEventListener('scroll', function (){
     }
     if (window.scrollY === 0 && headerTopSection) {
         headerTopSection.style.display = 'flex';
-        this.document.getElementById('offerings__nav__container').classList.remove('top-28');
-        this.document.getElementById('offerings__nav__container').classList.add('top-36');
-        this.document.getElementById('services').classList.remove('pt-24');
+        this.document.getElementById('offerings__nav__container')?.classList.remove('top-28');
+        this.document.getElementById('offerings__nav__container')?.classList.add('top-36');
+        this.document.getElementById('services')?.classList.remove('pt-24');
     }
     if (window.scrollY > 100 && headerTopSection) {
         if (headerTopSection.style.display !== 'hidden') {
             headerTopSection.style.display = 'none';
-            this.document.getElementById('offerings__nav__container').classList.remove('top-36');
-            this.document.getElementById('offerings__nav__container').classList.add('top-28');
-            this.document.getElementById('services').classList.add('pt-24');
+            this.document.getElementById('offerings__nav__container')?.classList.remove('top-36');
+            this.document.getElementById('offerings__nav__container')?.classList.add('top-28');
+            this.document.getElementById('services')?.classList.add('pt-24');
         }
     }
     if (window.scrollY < 200 && backToTopBtn) {
