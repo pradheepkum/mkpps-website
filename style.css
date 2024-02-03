@@ -82,10 +82,10 @@
   align-items: center;
   width: fit-content;
   animation-name: loop__tags;
+  animation-duration: 20s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: var(--direction);
-  animation-duration: var(--duration);
+  /* animation-direction: alternate; */
 }
 
 .inner:hover {
@@ -93,11 +93,11 @@
 }
 
 @keyframes loop__tags {
-  0% {
-    transform: translateX(0);
+  0%, 100% {
+      transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+      transform: translateX(-100%);
   }
 }
 
