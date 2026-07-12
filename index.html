@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Coming Soon</title>
+<title>MKPPS Consulting — Coming Soon</title>
+<meta name="description" content="MKPPS Consulting's website is being redesigned. We'll be back soon with a brand new experience." />
+<link rel="icon" type="image/png" href="./assets/img/favicon.png" />
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -16,7 +18,7 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    height:100vh;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -26,33 +28,42 @@ body{
         linear-gradient(135deg,#071427,#0d1b34,#111827);
     color:#fff;
     overflow:hidden;
+    padding:20px;
 }
 
 .background{
-    position:absolute;
+    position:fixed;
     inset:0;
     overflow:hidden;
+    z-index:0;
 }
 
 .background span{
     position:absolute;
-    width:280px;
-    height:280px;
     border-radius:50%;
-    background:rgba(255,255,255,0.03);
-    filter:blur(4px);
+    background:rgba(255,255,255,0.035);
+    filter:blur(6px);
+    animation:pulse 8s ease-in-out infinite;
 }
 
 .background span:nth-child(1){
-    top:-80px;
-    left:-80px;
+    top:-100px;
+    left:-100px;
+    width:320px;
+    height:320px;
 }
 
 .background span:nth-child(2){
-    bottom:-120px;
-    right:-100px;
-    width:380px;
-    height:380px;
+    bottom:-140px;
+    right:-110px;
+    width:420px;
+    height:420px;
+    animation-delay:-4s;
+}
+
+@keyframes pulse{
+    0%,100%{ transform:scale(1); opacity:.6; }
+    50%{ transform:scale(1.08); opacity:1; }
 }
 
 .card{
@@ -69,25 +80,60 @@ body{
 
     box-shadow:
         0 20px 60px rgba(0,0,0,.35);
+
+    animation:rise .7s cubic-bezier(.16,1,.3,1) both;
+}
+
+@keyframes rise{
+    from{ opacity:0; transform:translateY(18px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+.badge{
+    width:64px;
+    height:64px;
+    margin:0 auto 24px;
+    border-radius:16px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:11px;
+    box-shadow:0 10px 25px rgba(37,99,235,.4);
+}
+
+.badge img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
 }
 
 .small{
     color:#7dd3fc;
-    font-size:.9rem;
+    font-size:.85rem;
     letter-spacing:4px;
     text-transform:uppercase;
-    margin-bottom:20px;
+    margin-bottom:16px;
 }
 
 h1{
-    font-size:3rem;
-    margin-bottom:20px;
+    font-size:2.6rem;
     font-weight:700;
+    letter-spacing:-.5px;
 }
 
-p{
+.tagline{
+    font-size:1.15rem;
+    font-weight:500;
+    color:#93c5fd;
+    margin-bottom:20px;
+    margin-top:6px;
+}
+
+p.description{
     color:#d6d9e2;
-    font-size:1.1rem;
+    font-size:1.05rem;
     line-height:1.8;
     margin-bottom:40px;
 }
@@ -96,7 +142,7 @@ p{
     width:70px;
     height:4px;
     background:#3b82f6;
-    margin:0 auto 35px;
+    margin:24px auto 35px;
     border-radius:10px;
 }
 
@@ -124,10 +170,14 @@ p{
     }
 
     h1{
-        font-size:2.2rem;
+        font-size:2rem;
     }
 
-    p{
+    .tagline{
+        font-size:1rem;
+    }
+
+    p.description{
         font-size:1rem;
     }
 
@@ -144,44 +194,18 @@ p{
 
 <div class="card">
 
+    <div class="badge">
+        <img src="./assets/img/favicon.png" alt="MKPPS Consulting logo" />
+    </div>
+
     <div class="small">Website Update</div>
 
-<<<<<<< HEAD
-    <h1>🚧 Under Construction</h1>
-=======
-    <main class="pt-28 lg:pt-32">
-        <section class="w-full flex flex-row items-center justify-center" style="max-width: 100vw;">
-            <div class="w-full relative bg-white">
-                <div class="relative">
-                    <div class="w-full h-[400px] h-full flex-shrink-0 overflow-hidden items-center justify-center">
-                            <div class="relative w-full h-[400px] flex flex-row flex-row-reverse items-center justify-between bg-white">
-                                <img src="./assets/img/hero-img-0.jpeg" class="object-cover w-screen h-[400px]" />
-                                <div class="w-full h-full bg-black bg-opacity-60 absolute top-0 left-0 right-0 bottom-0"></div>
-                                <div class="absolute left-0 lg:left-0 right-0 bottom-20 w-full flex flex-col items-center justify-center">
-                                    <h1 class="w-full font-bold text-white z-20 text-5xl text-center tracking-tighter mb-2">
-                                        Transform Your Enterprise with Digital Core
-                                    </h1>
-                                    <p class="w-10/12 lg:w-6/12 text-white z-20 text-md text-center tracking-tighter mb-4">
-                                        Elevate operational efficiency, drive innovation, and stay ahead of the competition by seamlessly integrating cutting-edge digital solutions into your enterprise.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    
-                </div>
-            </div>
-        </section>
-        <section class="w-full px-4 lg:px-24 flex flex-col items-center pt-10 lg:pt-20">
-            <h1 class="w-full pt-2 lg:py-4 mb-4 font-black text-center text-blue-800 text-2xl lg:text-3xl flex flex-col items-center">
-                Our Services
-                <span class="w-32 h-1 bg-yellow-400"></span>
-            </h1>
-            <div class="mx-auto my-10 grid grid-cols-1 lg:grid-cols-3 border shadow-lg">
->>>>>>> parent of 7d11c2d (change spelling of title in index.html)
+    <h1>MKPPS Consulting</h1>
+    <div class="tagline">Coming Soon</div>
 
     <div class="divider"></div>
 
-    <p>
+    <p class="description">
         We're currently redesigning and improving our website to provide a
         better experience.
         <br><br>
@@ -199,10 +223,4 @@ p{
 </div>
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-<script src="tailwindcss.js"></script>
-<script src="index.js"></script>
-</html>
->>>>>>> parent of 7d11c2d (change spelling of title in index.html)
